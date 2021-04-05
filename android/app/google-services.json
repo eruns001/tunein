@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "993827766623",
+    "project_id": "netwalking-5c645",
+    "storage_bucket": "netwalking-5c645.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993827766623:android:684cd525bea440973336ea",
+        "android_client_info": {
+          "package_name": "com.example.tunein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993827766623-di1q1req013c4cvlgfpobrv0gbsmpnep.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tunein",
+            "certificate_hash": "f605c3c13798fb3e1226428c2b2e2cabcac5253e"
+          }
+        },
+        {
+          "client_id": "993827766623-rg0cu362jnujaklpjat1gs79vp1nqap7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMC11v-HC3Sshu9VLa_xOY8cXFval3Y64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993827766623-rg0cu362jnujaklpjat1gs79vp1nqap7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "993827766623-6b25kd2qu95j6qgjclpmbn9t13ttrf0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.juhwan976.networking"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
