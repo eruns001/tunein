@@ -189,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: ( context,  snapshot) {
         /// 데이터가 있을 경우 로그인이 되어있는 상태
-        if (snapshot.hasData) {
+        if (snapshot.hasData && isLogIn) {
           print("mainPage hasData");
           return Scaffold(
 
@@ -207,7 +207,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           );
-
         }
         /// 데이터가 없을 경우 로그인이 되어있지 않은 상태
         else {

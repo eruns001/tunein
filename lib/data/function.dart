@@ -109,20 +109,21 @@ Future<bool> signOutUser() async {
     await googleSignIn.disconnect();
   }
   await auth.signOut();
-
+  userNow = new TuneInUser();
   return Future.value(false);
 }
 
 ///회원탈퇴
 Future<bool> WithdrawalUser() async {
   User? user = FirebaseAuth.instance.currentUser;
-  FirebaseFirestore.instance.collection('Account').doc(uid).delete();
-  await user!.delete();
+  FirebaseFirestore.instance.collection('Account').doc(user!.uid).delete();
+  await user.delete();
   if(user.providerData[1].providerId == 'google.com'){
     await googleSignIn.disconnect();
   }
   await auth.signOut();
   user = null;
+  userNow = new TuneInUser();
   return Future.value(false);
 }
 
@@ -159,10 +160,10 @@ Future<bool> setuid() {
         position: ds.data()!['position'],
         address: ds.data()!['address'],
       );
+    }).then((value){
+      return true;
     });
-    return Future<bool>.value(true);
   }
-
   return Future<bool>.value(false);
 }
 ///init Login UserData 로그인 유저 데이터 입력

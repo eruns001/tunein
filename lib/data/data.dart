@@ -35,7 +35,7 @@ Widget test_temp = new Image.asset('images/search_btn_home.png');
 String uid = "";
 FirebaseAuth auth = FirebaseAuth.instance;
 GoogleSignIn googleSignIn = GoogleSignIn();
-bool IsLogIn = false;
+bool isLogIn = false;
 
 //datetime
 DateFormat dateFormat = DateFormat("yyyy-MM-dd HH:mm:ss");

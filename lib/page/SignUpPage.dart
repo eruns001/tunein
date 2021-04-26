@@ -99,7 +99,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   ///업로드
   Future _SignUpPageUpload() async{
-    IsLogIn = true;
+    isLogIn = true;
     ///firebase에 입력
     String document = "$uid";
     await FirebaseFirestore.instance.collection('Account').doc(document).set({
@@ -430,9 +430,9 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _buildAppBarTitle(double _deviceHeight, double _deviceWidth) {
     return Container(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-
+/*
           ///X버튼
           Container(
             margin: EdgeInsets.fromLTRB(_deviceWidth * 0.03, 0, 0, 0),
@@ -445,6 +445,8 @@ class _SignUpPageState extends State<SignUpPage> {
               },
             ),
           ),
+
+ */
 
           ///다음 버튼
           Container(

@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:tunein/data/data.dart';
 import 'package:tunein/data/function.dart';
 import 'package:tunein/page/SignUpPage.dart';
 
@@ -132,6 +133,7 @@ class _LogInState extends State<LogInPage> {
                       if (user != null) {
                         await FirebaseFirestore.instance.collection('Account').doc(user.uid).get().then((doc) {
                           if(doc.exists){
+                            isLogIn = true;
                             print("doc.exists");
                             Navigator.of(context).pushReplacement(MaterialPageRoute(
                                 builder: (context) => MyHomePage()));
@@ -146,6 +148,7 @@ class _LogInState extends State<LogInPage> {
                       }
 
                       else {
+                        print("doc.docelse");
                         Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                                 builder: (context) => MyHomePage()));
